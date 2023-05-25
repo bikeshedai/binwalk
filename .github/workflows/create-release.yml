@@ -14,8 +14,8 @@ jobs:
     steps:
       - 
         name: Archive project artifacts
-        run: tar -czvf binwalk.tar.gz .  # tar the current directory
+        run: tar -czvf /tmp/binwalk.tar.gz .  # tar the current directory
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: ./binwalk.tar.gz
+          files: /tmp/binwalk.tar.gz
