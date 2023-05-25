@@ -12,10 +12,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - 
-        name: Archive project artifacts
-        run: tar -czvf /tmp/binwalk.tar.gz .  # tar the current directory
       - name: Create Release
         uses: softprops/action-gh-release@v1
-        with:
-          files: /tmp/binwalk.tar.gz
